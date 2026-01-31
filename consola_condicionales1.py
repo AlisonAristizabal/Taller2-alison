@@ -51,3 +51,13 @@ def bisiesto(anio:int)->bool:
         es_bisiesto= True
     return es_bisiesto    
 
+def clasificar(a1:float, a2:float, a3:float)->str:
+    """ Retorna "equilatero" si el trangulo es equilatero,"isosceles" si es issosceles y "Escaleno" si es escaleno"""
+    clasificacion_triangulo = "nada"
+    if a1==a2 and a2==a3:
+        clasificacion_triangulo= "equilatero"
+    elif a1==a2 or a1==a3 or a2==a3:
+        clasificacion_triangulo= "isosceles"
+    else:
+        clasificacion_triangulo= "escaleno"
+    return clasificacion_triangulo
