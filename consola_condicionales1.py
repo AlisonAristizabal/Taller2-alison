@@ -8,7 +8,10 @@ def ejecutar_bisiesto()->None:
 
 def ejecutar_clasificar()->None:
     print("Vamos a determinar de qué tipo es un triángulo dados sus ángulos")
-    #TODO: completar
+    a1 = input("Ingrese el angulo 1: ")
+    a2 = input("Ingrese el angulo 2: ")
+    a3 = input("Ingrese el angulo 3: ")
+    print(clasificar(a1, a2, a3))
 
 def ejecutar_solucionar()->None:
     print("Vamos a tratar de hallar las soluciones de una ecuación cuadrática")
