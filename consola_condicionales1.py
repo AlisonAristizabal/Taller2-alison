@@ -1,11 +1,10 @@
-#TODO: importar el módulo
-import modulo_logica as ml
+
 def ejecutar_bisiesto()->None:
     print("Vamos a decidir si un año es bisiesto o no")
     #TODO: completar
-    anio=input("ingrese el año que quiere consultar: ")
-    bisiesto=ml.bisiesto(anio)
-    print(bisiesto)
+    anio = input("ingrese el año que quiere consultar: ")
+    bisiestoS = bisiesto(anio)
+    print(bisiestoS)
 
 def ejecutar_clasificar()->None:
     print("Vamos a determinar de qué tipo es un triángulo dados sus ángulos")
@@ -33,4 +32,22 @@ def iniciar_aplicacion()->None:
 #PROGRAMA PRINCIPAL
 iniciar_aplicacion()
 
-    
+def bisiesto(anio:int)->bool:
+    """
+    Returns
+    -------
+    bool
+        retorna true si año es un año bisiesto y false de lo contario
+
+    """
+    es_bisiesto= False
+    if anio % 4 != 0:
+        es_bisiesto= False
+    elif anio % 100 != 0:
+        es_bisiesto= True
+    elif anio % 400 != 0:
+        es_bisiesto= False
+    else:
+        es_bisiesto= True
+    return es_bisiesto    
+
